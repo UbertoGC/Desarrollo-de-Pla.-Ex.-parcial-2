@@ -24,13 +24,29 @@ $(document).ready(function(){
 	});
 </script>
 </head>
+<style type="text/css">
+  body {
+    color: purple;
+    background-color: #d8da3d }
+  h1 {
+    font-family: Helvetica, Geneva, Arial,
+          SunSans-Regular, sans-serif }
+  #div2{
+  	color: white;
+  	background-color: green;
+  	padding: 10px;
+  	margin: 90px;
+  }
+</style>
 <body>
-<!--http://localhost:8080/hola-->
-<label for="nombre">Nombre: </label>
-<input type="text" name="nombre" id="nombre"><br>
-<label for="descripción">Descripcion: </label>
-<input type="text" name="descripcion" id="descripcion"><br>
-<button id="button12">Enviar datos</button>
+<div id="div2"> 
+	<!--http://localhost:8080/hola-->
+	<label for="nombre">Nombre: </label>
+	<input type="text" name="nombre" id="nombre"><br>
+	<label for="descripción">Descripcion: </label>
+	<input type="text" name="descripcion" id="descripcion"><br>
+	<button id="button12">Enviar datos</button>
+</div>
 <div id="div1"></div>
 </body>
 </html>
