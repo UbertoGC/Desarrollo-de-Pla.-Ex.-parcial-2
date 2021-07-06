@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<h1>EXAMEN PARCIAL II, REGISTRAR</h1>
+<script src="C:\Users\Chuber\Documents\jararchivos\jquery-3.6.0.js"></script>
+<script>
+$(document).ready(function(){
+	  $("button").click(function(){
+		 $.ajax({
+			type: "POST",
+			url: "http://localhost:8080/CategoryRestService/Add", 
+			contentType: 'application/json',
+			data: JSON.stringify({"name":$('#nombre').val(), "description":$('#descripcion').val()}),
+			success: function(result){
+				console.log(result);
+					
+				$("#div1").html(result);
+			},
+			error : function(xhr, status) {
+				console.log(xhr);
+			}
+		});
+	  });
+	});
+</script>
+</head>
+<body>
+<!--http://localhost:8080/hola-->
+<label for="nombre">Nombre: </label>
+<input type="text" name="nombre" id="nombre"><br>
+<label for="descripción">Descripcion: </label>
+<input type="text" name="descripcion" id="descripcion"><br>
+<button id="button12">Enviar datos</button>
+<div id="div1"></div>
+</body>
+</html>
